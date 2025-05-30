@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  filecloud:
+    image: filecloud/fileclouddocker:23.241
+    container_name: filecloud
+    privileged: true
+    ports:
+      - "8080:80"
+      - "8443:443"
+    volumes:
+      - fcdata:/opt/fileclouddata
+      - dbdata:/var/lib/mongodb
+      - solrdata:/opt/solrfcdata/var/solr
+      - htmldata:/var/www/html
+    command: /lib/systemd/systemd
+    restart: unless-stopped
+
+volumes:
+  fcdata:
+  dbdata:
+  solrdata:
+  htmldata:
