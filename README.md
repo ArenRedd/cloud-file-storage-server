@@ -63,6 +63,7 @@ sudo docker stop test-fc
 sudo docker rm test-fc
 ```
 ### 🔗 More Info
+For full system architecture and design details, see [TECHNICAL_DESIGN.md](./TECHNICAL_DESIGN.md).
 More details about this project are available on my blog:
 👉 Visit Blog https://arenredd.github.io/
 
